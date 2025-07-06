@@ -23,7 +23,7 @@ export function EducationSection() {
       </div>
 
       {/* Liquid Glass Overlay */}
-      <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border border-white/20 rounded-2xl" />
+      {/* <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border border-white/20 rounded-2xl" /> */}
 
       <div className="relative z-10 container mx-auto px-6">
         {/* Section Title */}

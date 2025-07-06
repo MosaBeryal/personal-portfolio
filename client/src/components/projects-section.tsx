@@ -66,13 +66,13 @@ export function ProjectsSection() {
       className="relative overflow-hidden py-24 bg-card"
     >
       {/* ✨ Liquid Glass Background Blobs */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-8 left-8 w-64 h-64 bg-blue-400/20 rounded-full blur-3xl animate-blob" />
-        <div className="absolute bottom-8 right-8 w-80 h-80 bg-purple-400/20 rounded-full blur-3xl animate-blob" />
+    <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-400/30 rounded-full blur-3xl animate-blob" />
+        <div className="absolute bottom-20 right-0 w-80 h-80 bg-purple-400/30 rounded-full blur-3xl animate-blob" />
       </div>
 
       {/* 🧊 Frosted Glass Overlay */}
-      <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border border-white/20 rounded-2xl" />
+      {/* <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border border-white/20 rounded-2xl" /> */}
 
       <div className="relative z-10 container mx-auto px-6">
         <motion.h2

@@ -26,7 +26,10 @@ export function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative overflow-hidden min-h-screen flex items-center justify-center pt-24">
+    <section
+      id="home"
+      className="relative overflow-hidden min-h-screen flex items-center justify-center pt-24"
+    >
       {/* Background Blobs */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-60 h-60 md:w-72 md:h-72 bg-blue-400/30 rounded-full blur-3xl animate-blob" />
@@ -34,7 +37,7 @@ export function HeroSection() {
       </div>
 
       {/* Frosted Glass */}
-      <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border border-white/20 rounded-xl" />
+      {/* <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border border-white/20 rounded-xl" /> */}
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 flex flex-col items-center text-center">
@@ -51,7 +54,10 @@ export function HeroSection() {
         </motion.div>
 
         {/* Profile */}
-        <motion.div {...floatAnimation} className="mb-8 rounded-full p-1 bg-white/20 shadow-xl">
+        <motion.div
+          {...floatAnimation}
+          className="mb-8 rounded-full p-1 bg-white/20 shadow-xl"
+        >
           <motion.img
             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
             className="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full object-cover border-2 border-background"
@@ -61,23 +67,47 @@ export function HeroSection() {
         </motion.div>
 
         {/* Name */}
-        <motion.h1 {...fadeInDown} className="text-3xl sm:text-4xl md:text-6xl font-bold text-foreground">
+        <motion.h1
+          {...fadeInDown}
+          className="text-3xl sm:text-4xl md:text-6xl font-bold text-foreground"
+        >
           Mosa <span className="text-primary">Beryal</span>
         </motion.h1>
 
         {/* Subtitle */}
-        <motion.h2 {...fadeInUp} className="mt-3 text-base sm:text-lg md:text-2xl text-muted-foreground">
+        <motion.h2
+          {...fadeInUp}
+          className="mt-3 text-base sm:text-lg md:text-2xl text-muted-foreground"
+        >
           Full Stack Software Engineer
         </motion.h2>
 
         {/* Bio */}
-        <motion.p {...fadeIn} transition={{ delay: 0.5 }} className="mt-5 mb-10 max-w-2xl text-sm sm:text-base text-muted-foreground leading-relaxed">
-          Building scalable full stack applications, modern frontend experiences, and efficient backend systems with React, Node.js, Sequelize, Tailwind, Docker, and AWS.
+        <motion.p
+          {...fadeIn}
+          transition={{ delay: 0.5 }}
+          className="mt-5 mb-10 max-w-2xl text-sm sm:text-base text-muted-foreground leading-relaxed"
+        >
+          Building scalable full stack applications, modern frontend
+          experiences, and efficient backend systems with React, Node.js,
+          Sequelize, Tailwind, Docker, and AWS.
         </motion.p>
 
         {/* Tech Stack */}
-        <motion.div {...fadeInUp} transition={{ delay: 0.6 }} className="flex flex-wrap justify-center gap-3 mb-8">
-          {["React", "Node.js", "Sequelize", "Tailwind CSS", "Docker", "AWS", "SQL"].map((tech) => (
+        <motion.div
+          {...fadeInUp}
+          transition={{ delay: 0.6 }}
+          className="flex flex-wrap justify-center gap-3 mb-8"
+        >
+          {[
+            "React",
+            "Node.js",
+            "Sequelize",
+            "Tailwind CSS",
+            "Docker",
+            "AWS",
+            "SQL",
+          ].map((tech) => (
             <span
               key={tech}
               className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-medium"
@@ -88,7 +118,11 @@ export function HeroSection() {
         </motion.div>
 
         {/* Call to Actions */}
-        <motion.div {...fadeInUp} transition={{ delay: 0.7 }} className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6">
+        <motion.div
+          {...fadeInUp}
+          transition={{ delay: 0.7 }}
+          className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6"
+        >
           <Button
             size="lg"
             onClick={() => scrollToSection("#contact")}
@@ -127,12 +161,28 @@ export function HeroSection() {
         </motion.div>
 
         {/* Contact Links */}
-        <motion.div {...fadeIn} transition={{ delay: 1 }} className="flex flex-wrap justify-center gap-5 mt-8 text-muted-foreground">
+        <motion.div
+          {...fadeIn}
+          transition={{ delay: 1 }}
+          className="flex flex-wrap justify-center gap-5 mt-8 text-muted-foreground"
+        >
           {[
             { icon: Phone, text: "+92 305 9823223", href: "tel:+923059823223" },
-            { icon: Mail, text: "beryalmosa@gmail.com", href: "mailto:beryalmosa@gmail.com" },
-            { icon: Linkedin, text: "LinkedIn", href: "https://www.linkedin.com/in/mosa-beryal-b03233211/" },
-            { icon: Github, text: "GitHub", href: "https://github.com/MosaBeryal" },
+            {
+              icon: Mail,
+              text: "beryalmosa@gmail.com",
+              href: "mailto:beryalmosa@gmail.com",
+            },
+            {
+              icon: Linkedin,
+              text: "LinkedIn",
+              href: "https://www.linkedin.com/in/mosa-beryal-b03233211/",
+            },
+            {
+              icon: Github,
+              text: "GitHub",
+              href: "https://github.com/MosaBeryal",
+            },
           ].map((c, i) => (
             <a
               key={i}
@@ -148,7 +198,11 @@ export function HeroSection() {
         </motion.div>
 
         {/* Scroll Down */}
-        <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }} className="absolute bottom-8">
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="absolute bottom-8"
+        >
           <ChevronDown className="h-6 w-6 text-muted-foreground" />
         </motion.div>
       </div>

@@ -71,7 +71,7 @@ export function ContactSection() {
       </div>
 
       {/* Frosted Glass Overlay */}
-      <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border border-white/20 rounded-2xl z-0" />
+      {/* <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border border-white/20 rounded-2xl z-0" /> */}
 
       <div className="relative z-10 container mx-auto px-6 flex flex-col items-center text-center">
         {/* Section Heading */}

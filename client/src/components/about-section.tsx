@@ -18,7 +18,7 @@ export function AboutSection() {
       </div>
 
       {/* Liquid Glass Overlay */}
-      <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border border-white/20 rounded-2xl" />
+      {/* <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border border-white/20 rounded-2xl" /> */}
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 flex flex-col items-center text-center">
