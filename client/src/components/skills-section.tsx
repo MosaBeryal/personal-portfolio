@@ -100,7 +100,7 @@ export function SkillsSection() {
         >
           {skillCategories.map((cat, idx) => (
             <motion.div key={idx} variants={staggerItem}>
-              <Card className="relative flex flex-col h-full overflow-hidden rounded-3xl border border-white/20 bg-white/10 backdrop-blur-2xl shadow-2xl hover:scale-[1.03] transition-transform duration-300">
+              <Card className="relative flex flex-col h-full overflow-hidden rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl shadow-2xl hover:scale-[1.03] transition-transform duration-300">
                 <CardContent className="flex flex-col flex-1 p-6">
                   {/* Shimmer & specular reflection */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-3xl pointer-events-none" />
