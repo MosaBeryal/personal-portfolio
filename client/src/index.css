@@ -77,7 +77,7 @@
   }
 
   .nav-backdrop {
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(14px);
     background-color: var(--nav-backdrop);
   }
 
