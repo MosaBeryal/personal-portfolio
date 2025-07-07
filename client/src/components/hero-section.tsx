@@ -27,20 +27,15 @@ export function HeroSection() {
     return () => clearInterval(interval);
   }, []);
 
-  const scrollToSection = (href: string) => {
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section
       id="home"
-      className="relative overflow-hidden min-h-screen flex items-center justify-center pt-24 pb-20"
+      className="relative overflow-hidden min-h-[80vh] flex items-center justify-center pt-16 pb-12"
     >
       {/* Background Blobs */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-16 left-6 w-56 h-56 sm:w-64 sm:h-64 bg-blue-400/30 rounded-full blur-3xl animate-blob" />
-        <div className="absolute bottom-24 right-8 w-64 h-64 sm:w-72 sm:h-72 bg-purple-400/30 rounded-full blur-3xl animate-blob" />
+        <div className="absolute top-16 left-6 w-56 h-56 bg-blue-400/30 rounded-full blur-3xl animate-blob" />
+        <div className="absolute bottom-20 right-8 w-64 h-64 bg-purple-400/30 rounded-full blur-3xl animate-blob" />
       </div>
 
       {/* Content */}
@@ -48,12 +43,12 @@ export function HeroSection() {
         variants={staggerContainer}
         initial="initial"
         animate="animate"
-        className="relative z-10 container mx-auto px-6 flex flex-col items-center text-center space-y-6"
+        className="relative z-10 container mx-auto px-6 flex flex-col items-center text-center space-y-5"
       >
         {/* Availability Badge */}
         <motion.div
           variants={staggerItem}
-          className="flex items-center gap-3 bg-background/80 border border-white/10 rounded-full px-4 py-1 text-xs sm:text-sm font-medium text-foreground shadow backdrop-blur-lg"
+          className="flex items-center gap-2 bg-background/70 border border-white/10 rounded-full px-4 py-1 text-xs sm:text-sm font-medium text-foreground shadow backdrop-blur-lg"
         >
           <span className="relative flex h-3 w-3">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
@@ -65,12 +60,12 @@ export function HeroSection() {
         {/* Profile Image */}
         <motion.div
           variants={floatAnimation}
-          className="rounded-full p-1 bg-white/20 shadow-xl"
+          className="rounded-full p-1 bg-white/20 shadow-2xl"
         >
           <motion.img
             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
             alt="Mosa Beryal"
-            className="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full object-cover border-2 border-background"
+            className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-background"
             {...glowAnimation}
           />
         </motion.div>
@@ -97,32 +92,38 @@ export function HeroSection() {
           variants={fadeIn}
           className="max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed"
         >
-          I design scalable, fast web applications with modern frontend and backend stacks — React, Next.js, Node.js, Sequelize, Tailwind CSS, and AWS.
+          I design scalable, fast web applications with modern stacks — React,
+          Next.js, Node.js, Sequelize, Tailwind CSS, and AWS.
         </motion.p>
 
-        {/* CTA Buttons */}
-        <motion.div
-          variants={staggerContainer}
-          className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 md:gap-6 pt-5 w-full max-w-lg mx-auto"
-        >
-          <motion.div variants={staggerItem} className="w-full sm:w-auto">
-            <Button
-              variant="outline"
-              size="lg"
-              asChild
-              className="group w-full sm:w-auto px-5 py-3 rounded-full backdrop-blur-2xl bg-white/5 dark:bg-black/5 border border-white/10 shadow-lg hover:shadow-xl hover:scale-105 transition text-base"
+        {/* CTA Button */}
+        <motion.div variants={staggerItem} className="pt-4">
+          <Button
+            variant="outline"
+            size="lg"
+            asChild
+            className="group px-6 py-3 rounded-full 
+    backdrop-blur-[12px] 
+    bg-white/30 dark:bg-white/5
+    border border-black/10 dark:border-white/10 
+    shadow-[0_8px_24px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_24px_rgba(255,255,255,0.08)]
+    hover:shadow-[0_12px_32px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_12px_32px_rgba(255,255,255,0.12)]
+    transition transform hover:scale-105 text-base"
+          >
+            <a
+              href="https://calendar.google.com/calendar/u/0/appointments/schedules/your-schedule-id"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center text-foreground"
             >
-              <a
-                href="https://calendar.google.com/calendar/u/0/appointments/schedules/your-schedule-id"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center"
-              >
-                <CalendarDays className="h-5 w-5 mr-2" />
-                <span className="font-medium">Book a Meeting</span>
-              </a>
-            </Button>
-          </motion.div>
+              {/* <CalendarDays className="h-5 w-5 mr-2" /> */}
+              <img
+                src="/assets/icons8-google-calendar.svg"
+                className="w-7 h-8 mr-2"
+              />
+              <span className="font-medium">Schedule a Call</span>
+            </a>
+          </Button>
         </motion.div>
       </motion.div>
     </section>

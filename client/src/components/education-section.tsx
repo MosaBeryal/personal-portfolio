@@ -49,7 +49,7 @@ export function EducationSection() {
           variants={fadeInUp}
           className="max-w-4xl mx-auto"
         >
-          <Card className="relative border-l-4 border-primary shadow-lg bg-white/10 backdrop-blur-md">
+          <Card className="relative border-l-4 shadow-lg bg-white/5 border-white/20  backdrop-blur-xl">
             <CardContent className="p-8">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                 <div>
