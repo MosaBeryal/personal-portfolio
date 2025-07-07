@@ -118,12 +118,12 @@ export function ExperienceSection() {
     <section
       id="experience"
       ref={sectionRef}
-      className="relative overflow-hidden py-24 bg-card"
+      className="relative overflow-hidden py-24"
     >
       {/* Fluid Background Blobs */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-8 left-8 w-64 h-64 bg-blue-400/20 rounded-full blur-3xl animate-blob" />
-        <div className="absolute bottom-8 right-8 w-80 h-80 bg-purple-400/20 rounded-full blur-3xl animate-blob" />
+        <div className="absolute top-20 left-10 w-60 h-60 md:w-72 md:h-72 bg-blue-400/30 rounded-full blur-3xl animate-blob" />
+        <div className="absolute bottom-32 right-20 w-80 h-80 md:w-96 md:h-96 bg-purple-400/30 rounded-full blur-3xl animate-blob" />
       </div>
 
       {/* Frosted-Glass Overlay */}

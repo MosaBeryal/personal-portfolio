@@ -63,15 +63,13 @@ export function ProjectsSection() {
     <section
       id="projects"
       ref={sectionRef}
-      className="relative overflow-hidden py-24 bg-card"
+      className="relative overflow-hidden py-24"
     >
-      {/* ✨ Liquid Glass Background Blobs */}
-    <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-400/30 rounded-full blur-3xl animate-blob" />
-        <div className="absolute bottom-20 right-0 w-80 h-80 bg-purple-400/30 rounded-full blur-3xl animate-blob" />
+      {/* Background Blobs */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-10 w-60 h-60 md:w-72 md:h-72 bg-blue-400/30 rounded-full blur-3xl animate-blob" />
+        <div className="absolute bottom-32 right-20 w-80 h-80 md:w-96 md:h-96 bg-purple-400/30 rounded-full blur-3xl animate-blob" />
       </div>
-
-      {/* 🧊 Frosted Glass Overlay */}
       {/* <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border border-white/20 rounded-2xl" /> */}
 
       <div className="relative z-10 container mx-auto px-6">

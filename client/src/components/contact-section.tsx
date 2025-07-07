@@ -52,7 +52,11 @@ export function ContactSection() {
         setTimeout(() => setIsSubmitted(false), 3000);
       }
     } catch {
-      toast({ title: "Failed to send", description: "Please try again.", variant: "destructive" });
+      toast({
+        title: "Failed to send",
+        description: "Please try again.",
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -62,12 +66,12 @@ export function ContactSection() {
     <section
       id="contact"
       ref={sectionRef}
-      className="relative overflow-hidden py-24 bg-muted/30"
+      className="relative overflow-hidden py-24"
     >
-      {/* Animated Blobs */}
-      <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute top-10 left-10 w-64 h-64 bg-blue-400/20 rounded-full blur-3xl animate-blob" />
-        <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-400/20 rounded-full blur-3xl animate-blob" />
+      {/* Background Blobs */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-10 w-60 h-60 md:w-72 md:h-72 bg-blue-400/30 rounded-full blur-3xl animate-blob" />
+        <div className="absolute bottom-32 right-20 w-80 h-80 md:w-96 md:h-96 bg-purple-400/30 rounded-full blur-3xl animate-blob" />
       </div>
 
       {/* Frosted Glass Overlay */}
@@ -118,7 +122,9 @@ export function ContactSection() {
                             {field !== "message" ? (
                               <Input
                                 placeholder={
-                                  field === "email" ? "you@example.com" : undefined
+                                  field === "email"
+                                    ? "you@example.com"
+                                    : undefined
                                 }
                                 {...f}
                               />
