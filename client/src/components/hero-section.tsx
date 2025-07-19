@@ -63,7 +63,7 @@ export function HeroSection() {
           className="rounded-full p-1 bg-white/20 shadow-2xl"
         >
           <motion.img
-            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+            src="/assets/mosa-blue.jpg"
             alt="Mosa Beryal"
             className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-background"
             {...glowAnimation}

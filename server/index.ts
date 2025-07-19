@@ -53,7 +53,7 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  const port = 8080;
+  const port = 3000;
   server.listen(port, () => {
     log(`🚀 Server running on http://localhost:${port}`);
   });
